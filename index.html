@@ -4,24 +4,61 @@
     <meta charset="utf-8">
     <title>My App</title>
     <style>
+
       input[type=text]{
         background-color: red;
       }
       input[type=number]{
         background-color: blue;
       }
-/*Then next one helps us in a way that when someone selects text in P tags, the colour turns to red and the background to yellow.*/
+/*The next one helps us in a way that when someone selects text in P tags, the colour turns to red and the background to yellow.*/
 
       p::selection{
         color: red;
         background-color: yellow;
       }
+/*This is for printing and online view selection*/
+
+      @media print {
+        .screen-only{
+          display: none;
+        }
+      }
+
+/*@media for screen */
+
+      @media (min-width: 500px) {
+        body{
+          background-color: Red;
+        }
+      }
+
+      @media (max-width: 499px){
+        body{
+          background-color: blue;
+        }
+      }
+
+      @media (max-width: 500px){
+        h1::before{
+          content: "Welcome to My Page";
+        }
+      }
+
+      @media (max-width: 499px){
+        h1::before{
+          content: "Welcome!";
+        }
+      }
     </style>
+    
   </head>
   <body>
-    This is my App.
+
+    <h1>Welcome to my page</h1>
+    <p>This is my App.
     This is to test my knowledge on git hub, i am keeping track of my progress.
-    Added line
+    Added line</p>
 
     <h2>Tableof contents</h2>
     <ul>
@@ -31,16 +68,33 @@
     <ul>
     <h2 id="section1">Section1<h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+       dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+       ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
     <h2 id="section2">Section2<h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+       aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
     <h2 id="section3">Section3<h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+       magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
+
+
+
+    <p>Loasfwe safa s fawsks waasasss ssjas s vassvasl</P>
+    <p>Loasfwe safa s fawsks waasasss ssjas s vassvasl</P>
+    <p class="screen-only">Loasfweaklgagaskkvakvknva savsvs safa s fawsks waasasss ssjas s vassvasl</P>
+
+
 
     <form>
       <div>
@@ -65,5 +119,10 @@
           <option value="USA"
       </div>
     </form>
+
+
+
+
+
   </body>
 </html>
